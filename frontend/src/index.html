@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>ResQRoute – Emergency Dispatch &amp; Route Optimization</title>
+<meta name="description" content="Simulated emergency ambulance dispatch with Dijkstra shortest-path routing. Developed by Harsh Pande.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23ef4444'/%3E%3Cpath d='M16 7v18M7 16h18' stroke='white' stroke-width='5'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="app">
+  <aside id="side" class="side">
+    <div class="brand"><span class="logo"><svg viewBox="0 0 32 32"><path d="M16 7v18M7 16h18" stroke="#fff" stroke-width="5"/></svg></span><div><b>ResQRoute</b><small>Dispatch control</small></div></div>
+    <nav id="nav" aria-label="Main"></nav>
+    <div class="side-foot">
+      <div class="profile"><span class="avatar">CR</span><div><b>Control room</b><small>Dispatcher · demo mode</small></div></div>
+      <div class="credit">Developed by <b>Harsh Pande</b><br>Hosted on Netlify</div>
+    </div>
+  </aside>
+  <div class="main">
+    <header class="top">
+      <button id="burger" class="icon-btn" aria-label="Open menu"><svg class="i" viewBox="0 0 24 24"><path d="M3 6h18M3 12h18M3 18h18"/></svg></button>
+      <h1 id="title">Dashboard</h1>
+      <div class="top-right">
+        <span id="conn" class="pill conn connecting"><i></i><span>Connecting</span></span>
+        <button id="bell" class="icon-btn" aria-label="Notifications"><svg class="i" viewBox="0 0 24 24"><path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9M10.3 21a1.9 1.9 0 0 0 3.4 0"/></svg><b id="bellN" hidden>0</b></button>
+      </div>
+      <div id="notes" class="notes" hidden></div>
+    </header>
+    <main id="view" aria-live="polite"></main>
+  </div>
+</div>
+<div id="modal" class="modal" hidden></div>
+<div id="toasts" class="toasts" aria-live="assertive"></div>
+<script src="config.js"></script>
+<script type="module" src="js/main.js"></script>
+</body>
+</html>

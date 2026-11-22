@@ -1,0 +1,7 @@
+c_engine/build/
+frontend/dist/
+frontend/node_modules/
+__pycache__/
+.pytest_cache/
+*.db
+.env
